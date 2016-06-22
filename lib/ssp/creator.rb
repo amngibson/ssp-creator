@@ -5,7 +5,7 @@ module Ssp
   module Creator
     def Creator.start
 
-    file = File.read('nist-json.json')
+    file = File.read('nist-json.json', 'rb')
     output = File.new('output.html', 'w')
     data_hash = JSON.parse(file)
     controls = data_hash['controls']['control']
