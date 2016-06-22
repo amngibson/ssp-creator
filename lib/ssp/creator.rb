@@ -5,10 +5,11 @@ module Ssp
   module Creator
     def Creator.start
 
-    file = File.read('../../nist-json.json')
-    output = File.new('../../output.html', 'w')
+    file = File.read('nist-json.json')
+    output = File.new('output.html', 'w')
     data_hash = JSON.parse(file)
     controls = data_hash['controls']['control']
+    output.write "Date #{Time.new}"
     controls.each do |c|
       c.each do |key, value|
         value.each do |v|

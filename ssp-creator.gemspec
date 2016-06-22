@@ -7,7 +7,7 @@ Gem::Specification.new do |spec|
   spec.name          = "ssp-creator"
   spec.version       = Ssp::Creator::VERSION
   spec.authors       = ["Nathan Gibson"]
-  spec.email         = ["nathan@pithoslabs.com"]
+  spec.email         = ["amngibson@gmail.com"]
 
   spec.summary       = ""
   spec.description   = ""
