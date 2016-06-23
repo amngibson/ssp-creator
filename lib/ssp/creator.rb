@@ -9,10 +9,14 @@ module Ssp
     output = File.new('output.html', 'w')
     data_hash = JSON.parse(file)
     controls = data_hash['controls']['control']
-    output.write "Date #{Time.new}"
+    output.write("<html> <head>")
+    output.write("</head>")
+    output.write("<title>Date #{Time.new}<br>")
+    output.write("Mercury System Security Plan</title><br>")
     controls.each do |c|
       c.each do |key, value|
         value.each do |v|
+          output.write ("<p>")
             case key
               when "family"
                 if v != @family
@@ -33,7 +37,7 @@ module Ssp
               when "baseline-impact"
                 @impact = v
               when "statement"
-                output.write("#{v["description"].first}\n")
+                output.write("#{v["description"].first}\n <br>")
                 v.each do |v2key, v2val|
                   if v2val.kind_of?(Array)
                     v2val.each do |avals|
@@ -49,15 +53,15 @@ module Ssp
                                     when "description"
                                       @description_l2 = s2val
                                       puts "#{@number_l2.first} : #{@description_l2.first}"
-                                      output.write("#{@number_l2.first} : #{@description_l2.first}\n")
+                                      output.write("#{@number_l2.first} : #{@description_l2.first}\n <br>")
                                     else
                                       puts s2val
-                                      output.write("#{@number_l2.first} : #{s2val}\n")
+                                      output.write("#{@number_l2.first} : #{s2val}\n <br>")
                                   end
                                 end
                               else
                                 puts sval
-                                output.write("#{@number_l2.first} : #{sval}\n")
+                                output.write("#{@number_l2.first} : #{sval}\n <br>")
                               end
                             end
                           else
@@ -67,7 +71,7 @@ module Ssp
                               when "description"
                                 @description_l1 = h2vals
                                 puts "#{@number_l1.first} : #{@description_l1.first}"
-                                output.write("#{@number_l1.first} : #{@description_l1.first}\n")
+                                output.write("#{@number_l1.first} : #{@description_l1.first}\n <br>")
                               else
                                 puts h2vals
                             end
@@ -81,21 +85,21 @@ module Ssp
                 end
               when "supplemental-guidance"
                 puts "Supplmental Guidance: "
-                output.write("\nSupplmental Guidance:\n")
+                output.write("\nSupplmental Guidance:\n <br>")
                 if v.key?("description")
-                  output.write("#{v["description"].first}\n\n")
+                  output.write("#{v["description"].first}\n\n <br>")
                 end
                 if v.key?("related")
-                  output.write("Related Controls: \n")
+                  output.write("<br>Related Controls: \n <br>")
                   v["related"].each do |r|
-                    output.write("#{r}\n")
+                    output.write("#{r}\n <br>")
                   end
                   output.write("\n")
                 end
 
               when "control-enhancements"
                 puts "Control Enhancements: "
-                output.write("Control Enhancements: \n")
+                output.write("Control Enhancements: \n <br>")
                 v.each do |value_ch_key,value_ch|
                   value_ch.each do |v_ch|
                     v_ch.each do |v_ch_key, v_ch_value|
@@ -105,7 +109,7 @@ module Ssp
                       when "title"
                         title_ch = v_ch_value
                         puts "#{@control_ch.first} : #{title_ch.first}"
-                           output.write("#{@control_ch.first} : #{title_ch.first}\n")
+                           output.write("#{@control_ch.first} : #{title_ch.first}\n <br>")
                       when "baseline-impact"
                         @impact_ch = v_ch_value
                       when "statement"
@@ -124,7 +128,7 @@ module Ssp
                                             when "description"
                                               @description_l2_ch = s2val_ch
                                               puts "#{@number_l2_ch.first} : #{@description_l2_ch.first}"
-                                              output.write("#{@number_l2_ch.first} : #{@description_l2_ch.first}\n")
+                                              output.write("#{@number_l2_ch.first} : #{@description_l2_ch.first}\n <br>")
                                             else
                                               puts s2val_ch
                                           end
@@ -140,7 +144,7 @@ module Ssp
                                       when "description"
                                         @description_l1_ch = h2vals_ch
                                         puts "#{@number_l1_ch.first} : #{@description_l1_ch.first}"
-                                        output.write("#{@number_l1_ch.first} : #{@description_l1_ch.first}")
+                                        output.write("#{@number_l1_ch.first} : #{@description_l1_ch.first} <br>")
                                       else
                                         puts h2vals_ch
                                     end
@@ -167,7 +171,7 @@ module Ssp
                                             when "description"
                                               @description_sup = s2val
                                               puts @description_sup
-                                              output.write("#{@description_sup}\n")
+                                              output.write("#{@description_sup}\n <br>")
                                             else
                                               puts s2val
                                           end
@@ -183,7 +187,7 @@ module Ssp
                                       when "description"
                                         @description_l1 = h2vals
                                         puts "#{@number_l1.first} : #{@description_l1.first}"
-                                        output.write("#{@number_l1.first} : #{@description_l1.first}\n")
+                                        output.write("#{@number_l1.first} : #{@description_l1.first}\n <br>")
                                       else
                                         puts h2vals
                                     end
@@ -199,7 +203,7 @@ module Ssp
                         puts "Control Enhancements: "
                         @enhancement = v
                         puts @enhancement
-                           output.write("#{@enhancement}\n")
+                           output.write("#{@enhancement}\n <br>")
                       else
                         puts v
                     end
@@ -209,9 +213,11 @@ module Ssp
               else
                 puts v
             end
+          output.write ("</p>")
           end
         end
     end
+    output.write("</html>")
     end
   end
 end
