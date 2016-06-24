@@ -3,7 +3,7 @@
   <component name="ChangeListManager">
     <list default="true" id="0452f5a1-c972-4764-abe6-b43e83ddf98e" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/lib/ssp/creator.rb" afterPath="$PROJECT_DIR$/lib/ssp/creator.rb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/output.html" afterPath="$PROJECT_DIR$/output.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="ssp-creator.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -43,7 +43,7 @@
       <file leaf-file-name="nist-json.json" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/nist-json.json">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.3272727">
+            <state vertical-scroll-proportion="0.0">
               <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
               <folding />
             </state>
@@ -86,7 +86,7 @@
             <state />
           </provider>
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-0.0">
+            <state vertical-scroll-proportion="0.0">
               <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
               <folding />
             </state>
@@ -103,20 +103,20 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="creator.rb" pinned="false" current-in-tab="false">
+      <file leaf-file-name="creator.rb" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/lib/ssp/creator.rb">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-9.068966">
-              <caret line="95" column="21" selection-start-line="95" selection-start-column="21" selection-end-line="95" selection-end-column="21" />
+            <state vertical-scroll-proportion="0.3901274">
+              <caret line="14" column="54" selection-start-line="14" selection-start-column="54" selection-end-line="14" selection-end-column="54" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="output.html" pinned="false" current-in-tab="true">
+      <file leaf-file-name="output.html" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/output.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.114285715">
+            <state vertical-scroll-proportion="0.0">
               <caret line="4" column="0" selection-start-line="4" selection-start-column="0" selection-end-line="4" selection-end-column="0" />
               <folding />
             </state>
@@ -152,8 +152,8 @@
         <option value="$PROJECT_DIR$/bin/ssp" />
         <option value="$PROJECT_DIR$/ssp-creator.gemspec" />
         <option value="$PROJECT_DIR$/lib/ssp/creator/version.rb" />
-        <option value="$PROJECT_DIR$/lib/ssp/creator.rb" />
         <option value="$PROJECT_DIR$/output.html" />
+        <option value="$PROJECT_DIR$/lib/ssp/creator.rb" />
       </list>
     </option>
   </component>
@@ -193,7 +193,6 @@
       <sortByType />
     </navigator>
     <panes>
-      <pane id="Scope" />
       <pane id="Scratches" />
       <pane id="ProjectPane">
         <subPane>
@@ -269,6 +268,7 @@
           </PATH>
         </subPane>
       </pane>
+      <pane id="Scope" />
       <pane id="PackagesPane" />
     </panes>
   </component>
@@ -950,7 +950,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/nist-json.json">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.3272727">
+        <state vertical-scroll-proportion="0.0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding />
         </state>
@@ -983,18 +983,18 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/lib/ssp/creator.rb">
+    <entry file="file://$PROJECT_DIR$/output.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-9.068966">
-          <caret line="95" column="21" selection-start-line="95" selection-start-column="21" selection-end-line="95" selection-end-column="21" />
+        <state vertical-scroll-proportion="0.0">
+          <caret line="4" column="0" selection-start-line="4" selection-start-column="0" selection-end-line="4" selection-end-column="0" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/output.html">
+    <entry file="file://$PROJECT_DIR$/lib/ssp/creator.rb">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.114285715">
-          <caret line="4" column="0" selection-start-line="4" selection-start-column="0" selection-end-line="4" selection-end-column="0" />
+        <state vertical-scroll-proportion="0.3901274">
+          <caret line="14" column="54" selection-start-line="14" selection-start-column="54" selection-end-line="14" selection-end-column="54" />
           <folding />
         </state>
       </provider>

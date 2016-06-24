@@ -11,8 +11,8 @@ module Ssp
     controls = data_hash['controls']['control']
     output.write("<html> <head>")
     output.write("</head>")
-    output.write("<title>Date #{Time.new}<br>")
-    output.write("Mercury System Security Plan</title><br>")
+    output.write("Date #{Time.new}<br>")
+    output.write("Mercury System Security Plan<br><br>")
     controls.each do |c|
       c.each do |key, value|
         value.each do |v|
